@@ -4,7 +4,7 @@ import { type NextRequest } from 'next/server';
 
 export async function GET(
  request: NextRequest,
-  context: { params: { id: string } }
+  context: { params: {  id: string | string[]  } }
 ) {
   try {
     const { id } = params; // Destructure id from params
