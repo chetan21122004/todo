@@ -3,8 +3,8 @@ import { NextResponse } from 'next/server';
 import { type NextRequest } from 'next/server';
 
 export async function GET(
-  request: NextRequest,
-  { params }: { params: { id: string } } // Correctly typed params
+ request: NextRequest,
+  context: { params: { id: string } }
 ) {
   try {
     const { id } = params; // Destructure id from params
